@@ -1,0 +1,61 @@
+<!-- Master Container -->
+<div class="position-relative d-flex justify-content-center align-items-center vh-100">
+
+    <!-- Random button for trigger -->
+    <button type="button" class="btn btn-info text-white fs-6 px-4 py-2" (click)="toggleTerms()">Login</button>
+
+    <div *ngIf="openTerms" class="position-absolute d-flex justify-content-center align-items-center vh-100 w-100">
+        <!-- Gray background -->
+        <div class="position-absolute w-100 h-100 bg-dark opacity-50 z-index-2"></div>
+
+        <!-- Container "Entire Box" -->
+        <div class="d-flex flex-column bg-white position-absolute z-index-5 rounded-3 px-5 py-4 containerBox align-items-center ">
+
+            <!-- Title -->
+            <h2 class="fs-3 mt-4 mb-3 text-primary fw-bold" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                Review & Accept Terms
+            </h2>
+
+            <!-- Paragraph -->
+            <div class="d-flex flex-column gap-3 text-muted containerTermsP">
+                <p class="fs-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis mollitia accusantium rem odit,
+                    culpa soluta
+                    dolorem, eligendi deleniti minima pariatur id rerum a libero perspiciatis, esse voluptate
+                    consequatur ad
+                    beatae.
+                </p>
+                <p class="fs-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis mollitia accusantium rem odit,
+                    culpa soluta
+                    dolorem, eligendi deleniti minima pariatur id rerum a libero perspiciatis, esse voluptate
+                    consequatur ad beatae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo temporibus
+                    commodi obcaecati quis voluptatibus assumenda, expedita voluptas suscipit consequatur culpa totam
+                    voluptates nesciunt quia voluptatum laborum, beatae veritatis? Cupiditate, adipisci. Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Autem sed id, ut nobis voluptatum porro, eum nisi minus
+                    odit aperiam pariatur provident, cum ex hic numquam sequi eligendi est illo?
+                </p>
+                <p class="fs-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo explicabo alias eveniet eius illum
+                    iusto. Animi
+                    atque quos incidunt voluptatum quisquam. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Quos omnis quam alias, quis fugiat ea aliquid temporibus corporis in cumque earum quas amet eligendi
+                    enim fuga? Dolore earum id pariatur!
+                </p>
+            </div>
+
+            <!-- Checkbox and agreement -->
+            <div class="d-flex align-items-center mt-4 checkboxAndAgree">
+                <input type="checkbox" [(ngModel)]="isChecked" id="terms" class="form-check-input me-2 checkboxV" />
+                <label class="fs-5 text-secondary" for="terms">
+                    I agree to the Terms & Conditions and Privacy Policy
+                </label>
+            </div>
+
+            <!-- Continue button -->
+            <button type="button" class="btn btn-info text-white w-50 mx-auto mt-4 py-2" [disabled]="!isChecked"
+                (click)="toggleTerms()">Continue</button>
+        </div>
+
+    </div>
+</div>

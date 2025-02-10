@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+/* Esempio di classe personalizzata per il titolo */
+.text-primary {
+    color: #141f58 !important;
+  }
+  
+  /* Esempio di bordo arrotondato per il popup */
+  .bg-white {
+    border-radius: 15px !important;
+  }
+  
+  /* Sfondo semi-trasparente */
+  .bg-dark {
+    background-color: rgba(89, 89, 89, 0.538) !important;
+  }
+  
+  /* Bordi e padding aggiuntivi */
+  .z-index-5 {
+    z-index: 5 !important;
+  }
+  
+
+  .containerBox{
+   max-width: 960px; 
+   max-height: 620px;
+   margin: 100px;
+  }
+
+  .containerTermsP{
+   height: 300px; 
+   overflow-y: scroll;
+   padding-top: 20px;
+  }
+
+  .checkboxAndAgree{
+    padding-top: 25px;
+  }
+
+  .checkboxV{
+   width: 23px; 
+   height: 23px;
+  }
